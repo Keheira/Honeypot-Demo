@@ -8,9 +8,8 @@ There are two types of honeypots, low interaction and high interaction. A low in
 
 ## Results
 
-Here is a video of the whole experiment: *insert video*
-<br>
-We can see that when I run *insert things I do* what information is collected from our honeypot that can be used to create new rules for intrusion protection. <br>
+If you check the logs form the experiment you will see any activity being preformed by our attacker that is collected from our honeypot. If this was an actual production environment we could use this behavior that we have flagged in order to create new rules for intrusion protection. This particular experiment was a low interaction honeypot.<br>
+If you wanted something more high level you would have to ecenstionally create a clone of the whole VM (OS included).
 
 ## Run My Experiment
 
@@ -23,6 +22,7 @@ Wait for your nodes to boot up and then ssh to log into each node in your topolo
 Run ` curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py ` followed by ` python get-pip.py --user ` to get pip on your main server.<br>
 Run ` pip install virtualenv --user ` to get virtual env and then proceed to the steps [here at cowrie](https://github.com/micheloosterhof/cowrie/blob/master/INSTALL.md)<br>
 Finally login to your node from the "attacker" and try creating, rename, updating, and deleting a file.<br>
+To check the logs for your system make sure check out ` cowrie.log` and to stop your honeypot be sure to run `bin/cowrie stop`
 
 ## Resources
 
